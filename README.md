@@ -1,4 +1,4 @@
-# Android device tree for samsung SM-A125F (a12)
+# Lineageos device tree for samsung SM-A125F (a12)
 
 ```
 #
