@@ -10,7 +10,7 @@ To build a custom ROM for the Samsung Galaxy A12, you need to be familiar with [
 Use the following command to initialize your local repository with the custom ROM trees:
 
 ```bash
-repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
+repo init -u https://github.com/LineageOS/android.git -b lineage-19.1 --git-lfs
 ```
 
 ### Sync the Repository
@@ -27,17 +27,17 @@ Clone the necessary repositories for the Samsung Galaxy A12:
 
 - **Device Tree**:  
    ```bash
-   git clone https://github.com/unasir008/lineage-device-tree-a125f.git device/samsung/a12
+   git clone https://github.com/unasir008/android_device_samsung_a12.git device/samsung/a12
    ```
 
 - **Vendor Tree**:  
    ```bash
-   git clone https://github.com/unasir008/galaxy-a125f-vendor-tree.git vendor/samsung/a12
+   git clone https://github.com/unasir008/android_vendor_samsung_a12.git vendor/samsung/a12
    ```
 
 - **Kernel Tree**:  
    ```bash
-   git clone https://github.com/physwizz/a125m-S-u4.git kernel/samsung/a12
+   git clone https://github.com/unasir008/android_kernel_samsung_a12.git kernel/samsung/a12
    ```
 
 Ensure the directory structure looks like this:
