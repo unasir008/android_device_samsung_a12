@@ -126,5 +126,10 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := \
     $(DEVICE_PATH)/compatibility_matrix.xml
 
+# Rootfs
+BOARD_ROOT_EXTRA_FOLDERS += \
+    efs \
+    metadata \
+
 # Inherit the proprietary files
 include vendor/samsung/a12/BoardConfigVendor.mk
