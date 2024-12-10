@@ -6,6 +6,9 @@
 
 DEVICE_PATH := device/samsung/a12
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := a12
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -119,6 +122,9 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # VINTF
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+
+DEVICE_MATRIX_FILE := \
+    $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Inherit the proprietary files
 include vendor/samsung/a12/BoardConfigVendor.mk
