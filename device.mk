@@ -21,6 +21,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
 
+# Camera
+PRODUCT_PACKAGES += \
+    GoogleCameraGo
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
