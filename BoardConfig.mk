@@ -57,6 +57,9 @@ endif
 # Enable A/B partition support
 BOARD_AB_PARTITIONS := true
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
+
 # Enable A/B system updates
 AB_OTA_UPDATER := false
 # BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
