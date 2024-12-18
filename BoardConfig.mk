@@ -59,7 +59,7 @@ BOARD_AB_PARTITIONS := true
 
 # Enable A/B system updates
 AB_OTA_UPDATER := true
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+# BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # Enable dynamic partitions for A/B devices
 BOARD_USE_DYNAMIC_PARTITIONS := true
