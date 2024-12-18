@@ -25,6 +25,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GoogleCameraGo
 
+# prebuilt cacheimae
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/cacheimage/cache.img:cache.img
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
