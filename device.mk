@@ -88,8 +88,8 @@ PRODUCT_PACKAGES += \
     install-recovery.sh \
 
 PRODUCT_PACKAGES += \
-    fstab.ramplus \
-    fastab.mt6765 \
+    fstab.enableswap \
+    fstab.mt6765 \
     factory_init.connectivity.common.rc \
     factory_init.connectivity.rc \
     factory_init.project.rc \
@@ -114,7 +114,7 @@ PRODUCT_PACKAGES += \
     init.recovery.samsung.rc \
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.ramplus:$(TARGET_COPY_OUT_RAMDISK)/fstab.ramplus \
+    $(LOCAL_PATH)/rootdir/etc/fstab.ramplus:$(TARGET_COPY_OUT_RAMDISK)/fstab.enableswap \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6765:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6765 \
 
 # Soong namespaces
