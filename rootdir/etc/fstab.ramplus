@@ -1,2 +1,1 @@
 /dev/block/zram0     none     swap     defaults     zramsize=2147483648,auto_configure
-/dev/block/bootdevice/by-name/cache                     /cache                 ext4    nosuid,noatime,nodev,barrier=1                       wait
