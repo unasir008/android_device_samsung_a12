@@ -25,10 +25,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GoogleCameraGo
 
-# prebuilt cacheimae
-# PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/prebuilt/cacheimage/cache.img:$(TARGET_COPY_OUT_VENDOR)/cache.img
-
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -93,6 +89,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     fstab.ramplus \
+    fastab.mt6765 \
     factory_init.connectivity.common.rc \
     factory_init.connectivity.rc \
     factory_init.project.rc \
@@ -117,7 +114,8 @@ PRODUCT_PACKAGES += \
     init.recovery.samsung.rc \
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.ramplus:$(TARGET_COPY_OUT_RAMDISK)/fstab.ramplus
+    $(LOCAL_PATH)/rootdir/etc/fstab.ramplus:$(TARGET_COPY_OUT_RAMDISK)/fstab.ramplus \
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6765:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6765 \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
