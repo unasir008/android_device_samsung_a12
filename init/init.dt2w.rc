@@ -1,0 +1,11 @@
+on property:sys.boot_completed=1
+    # Create the mountpoint for mnt/vendor partitions
+    mkdir /sys/class/sec 0771 root root
+    restorecon_recursive /sys/class/sec/tsp
+    restorecon /sys/class/sec/tsp/cmd
+
+    # Permissions for Touchscreen
+    chown system radio /sys/class/sec/tsp/cmdd
+
+    # Enable dt2w
+    write /sys/class/sec/tsp/cmd aot_enable,1
