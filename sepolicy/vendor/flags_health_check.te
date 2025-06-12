@@ -1,0 +1,18 @@
+# Allow flags_health_check to read system and vendor properties
+
+init_daemon_domain(flags_health_check)
+
+# Allow reading various property files
+allow flags_health_check property_type:file { read open getattr map };
+allow flags_health_check vendor_default_prop:file { read open getattr map };
+allow flags_health_check system_prop:file { read open getattr map };
+
+# These were all denied in your ramoops log:
+allow flags_health_check test_boot_reason_prop:file { read open getattr map };
+allow flags_health_check traced_enabled_prop:file { read open getattr map };
+allow flags_health_check tombstone_config_prop:file { read open getattr map };
+allow flags_health_check theme_prop:file { read open getattr map };
+allow flags_health_check time_prop:file { read open getattr map };
+allow flags_health_check vehicle_hal_prop:file { read open getattr map };
+allow flags_health_check vendor_security_patch_level_prop:file { read open getattr map };
+
