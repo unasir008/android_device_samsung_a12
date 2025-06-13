@@ -1,4 +1,4 @@
-<manifest version="4.0" type="device" target-level="4">
+<manifest version="4.0" type="device" target-level="5">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -8,11 +8,6 @@
         <name>android.hardware.audio.effect</name>
         <transport>hwbinder</transport>
         <fqname>@7.0::IEffectsFactory/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.biometrics.face</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IBiometricsFace/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.bluetooth</name>
@@ -27,12 +22,7 @@
     <hal format="hidl">
         <name>android.hardware.camera.provider</name>
         <transport>hwbinder</transport>
-        <fqname>@2.6::ICameraProvider/legacy/0</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.configstore</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.1::ISurfaceFlingerConfigs/default</fqname>
+        <fqname>@2.6::ICameraProvider/internal/0</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
@@ -61,11 +51,6 @@
         <fqname>@4.0::IMapper/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.keymaster</name>
-        <transport>hwbinder</transport>
-        <fqname>@4.0::IKeymasterDevice/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.media.omx</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IOmx/default</fqname>
@@ -77,25 +62,26 @@
         <fqname>@1.0::IMemtrack/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.radio</name>
-        <transport>hwbinder</transport>
+        <name>android.hardware.renderscript</name>
+        <transport arch="32+64">passthrough</transport>
+        <fqname>@1.0::IDevice/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.security.keymint</name>
+        <fqname>IKeyMintDevice/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.security.secureclock</name>
+        <fqname>ISecureClock/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.security.sharedsecret</name>
+        <fqname>ISharedSecret/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.radio</name>
+        <name>android.hardware.sensors</name>
         <transport>hwbinder</transport>
-        <fqname>@1.2::ISap/slot1</fqname>
-        <fqname>@1.2::ISap/slot2</fqname>
-        <fqname>@1.4::IRadio/slot1</fqname>
-        <fqname>@1.4::IRadio/slot2</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.radio.config</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.1::IRadioConfig/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.radio.deprecated</name>
-        <transport>hwbinder</transport>
+        <fqname>@2.0::ISensors/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.tetheroffload.config</name>
@@ -114,9 +100,14 @@
         <fqname>@2.0::IThermal/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.vibrator</name>
+        <name>interfaces.factoryAta</name>
         <transport>hwbinder</transport>
-        <fqname>@1.3::IVibrator/default</fqname>
+        <fqname>@1.0::IFactoryAta/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>interfaces.factoryInterface</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IFactoryInterface/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.aee</name>
@@ -137,6 +128,16 @@
         <name>vendor.mediatek.hardware.bluetooth.audio</name>
         <transport>hwbinder</transport>
         <fqname>@2.2::IBluetoothAudioProvidersFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.camera.bgservice</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::IBGService/internal/0</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.camera.isphal</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IISPModule/internal/0</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.composer_ext</name>
@@ -184,10 +185,6 @@
         <fqname>@1.2::IMtkPower/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.mediatek.hardware.mtkradioex</name>
-        <transport>hwbinder</transport>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.netdagent</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::INetdagent/default</fqname>
@@ -198,33 +195,32 @@
         <fqname>@1.1::INvram/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.mediatek.hardware.videotelephony</name>
+        <name>vendor.mediatek.hardware.nwk_opt</name>
         <transport>hwbinder</transport>
+        <fqname>@1.0::INwkOpt/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.samsung.hardware.audio</name>
+        <name>vendor.mediatek.hardware.pq</name>
         <transport>hwbinder</transport>
-        <fqname>@1.0::ISehDevicesFactory/default</fqname>
+        <fqname>@2.11::IPictureQuality/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.samsung.hardware.biometrics.face</name>
+        <name>vendor.samsung.hardware.bluetooth.audio</name>
         <transport>hwbinder</transport>
-        <fqname>@2.0::ISehBiometricsFace/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.bluetooth</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.0::ISehBluetooth/default</fqname>
+        <fqname>@2.1::ISehBluetoothAudioProvidersFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.gnss</name>
         <transport>hwbinder</transport>
         <fqname>@2.0::ISehGnss/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.ifaa</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::ISehIfaa/default</fqname>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.keymint</name>
+        <fqname>ISehKeyMintExtension/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.keymint</name>
+        <fqname>ISehKeyMintFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.miscpower</name>
@@ -232,59 +228,19 @@
         <fqname>@2.0::ISehMiscPower/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.samsung.hardware.radio</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.2::ISehRadio/slot1</fqname>
-        <fqname>@2.2::ISehRadio/slot2</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.radio.bridge</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.0::ISehBridge/slot1</fqname>
-        <fqname>@2.0::ISehBridge/slot2</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.radio.channel</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.0::ISehChannel/epdgd</fqname>
-        <fqname>@2.0::ISehChannel/epdgd2</fqname>
-        <fqname>@2.0::ISehChannel/imsd</fqname>
-        <fqname>@2.0::ISehChannel/imsd2</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.samsung.hardware.security.drk</name>
         <transport>hwbinder</transport>
         <fqname>@2.0::ISehDrk/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.samsung.hardware.security.skpm</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::ISehSkpm/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.security.widevine.keyprov</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::ISehWidevineKeyProvisioning/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.snap</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.2::ISehSnap/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.soter</name>
-        <transport>hwbinder</transport>
-        <fqname>@3.0::ISehSoter/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.samsung.hardware.sysinput</name>
         <transport>hwbinder</transport>
-        <fqname>@1.2::ISehSysInputDev/default</fqname>
+        <fqname>@1.3::ISehSysInputDev/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.samsung.hardware.vibrator</name>
+        <name>vendor.samsung.hardware.tlc.ucm</name>
         <transport>hwbinder</transport>
-        <fqname>@2.2::ISehVibrator/default</fqname>
+        <fqname>@2.0::ISehUcm/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.wifi.supplicant</name>

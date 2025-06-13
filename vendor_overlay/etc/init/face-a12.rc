@@ -1,0 +1,12 @@
+# HS14_U code for AL6528AU-255 by WangLetian at 20240407 end
+#on post-fs-data
+#    chown system system /data/vendor/
+
+#on property:persist.sys.setupwizard=FINISH
+#    setprop persist.vendor.setupswizard FINISH
+# HS14_U code for AL6528AU-255 by WangLetian at 20240407 end
+
+#service vendor.face-default /vendor/bin/hw/vendor.samsung.hardware.biometrics.face.a12-service
+#    class hal
+#    user system
+#    group system input uhid
